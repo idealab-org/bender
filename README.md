@@ -9,9 +9,9 @@ Given Query: Pick the box with text "RED"
 
 | RED BOX | GREEN BOX | BLUE BOX |
 
-1 = r
-2 = g
-3 = b
+- 1 = r
+- 2 = g
+- 3 = b
 
 json: ```{2, 1, 3}```
 
