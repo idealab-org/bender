@@ -27,9 +27,7 @@ Test 2. Selected text/color for 3 dynamic positioned boxes in 1x3
 
 Given Query: Pick the box with color "RED"
 
-| RED BOX | GREEN BOX | BLUE BOX |
-
-json: ```{(r,r), (b,g), (g,b)}```
+json: ```{{r,r}, {b,g}, {g,b}}```
 
 Results in
 
@@ -38,4 +36,29 @@ Results in
 | TEXT RED | TEXT GREEN | TEXT BLUE |
 
 
+Test3. Selected text/color for 3 dynamic positioned boxes in 3x3
 
+Given Query: Pick the box with color "RED"
+
+json: ```{({0,1},r,r), ({1,1},b,g), ({2,2},g,b)}```
+
+Results in
+
+| - | b:R / t:R | - |
+|-------------|-------------|-------------|
+| - | b:b/ t:g | - |
+| - | - | b:g/ t:b |
+
+
+Test4. Selected text/color for 9 dynamic positioned boxes in 3x3
+
+Given Query: Pick the box with color "RED"
+
+json: ```{({0,1},r,r), ({1,1},b,g), ({2,2},g,b), ...}```
+
+Results in
+
+| ... | b:R / t:R | ... |
+|-------------|-------------|-------------|
+| ... | b:b/ t:g | ... |
+| ... | ... | b:g/ t:b |
